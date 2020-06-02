@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello from a template</h1>
+    {% for filename in filenames %}
+    <!-- The next line recieves the image_filename fro the app.py and displays it as an image -->
+    <img src="{{url_for('static', filename='images/'+filename[0])}}" alt="" height=300px>
+    {% endfor %}
+</body>
+</html>
